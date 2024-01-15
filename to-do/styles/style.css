@@ -1,0 +1,134 @@
+@import url(./fonts.css);
+@import url(./root.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Principal */
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--r), var(--g), var(--b));
+  padding: 10px;
+}
+
+.todo-list {
+  width: 100%;
+  max-width: 540px;
+  background: var(--white);
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 38px;
+  padding-left: 8px;
+  margin-bottom: 25px;
+}
+
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-size: 19px;
+}
+
+button {
+  font-size: 35px;
+  background-color: var(--white);
+  border: none;
+  outline: none;
+  padding: 0px 1px;
+  cursor: pointer;
+}
+
+ul li {
+  color: var(--black);
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+
+ul li::before {
+  content: '';
+  position: absolute;
+  height: 25px;
+  width: 27px;
+  border-radius: 50%;
+  background-image: url(../img/check_box_outline_blank.png);
+  background-size: cover;
+  background-position: 0px;
+  top: 15px;
+  left: 8px;
+}
+
+ul li.checked {
+  color: var(--gray-a);
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  background-image: url(../img/check_box.png);
+}
+
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: var(--gray-a);
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+ul li span:hover {
+  background: var(--gray);
+}
+
+/* papers */
+.papers {
+  display: flex;
+  height: 32px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  bottom: 32px;
+}
+
+.paper-frame {
+  position: relative;
+  width: 506px;
+  height: 13px;
+  top: -13px;
+  flex-shrink: 0;
+  border-radius: 0px 0px 12px 12px;
+  background: linear-gradient(89deg, rgba(255, 255, 255, 0.60) 5.66%, rgba(255, 255, 255, 0.20) 104.97%);
+  backdrop-filter: blur(8px);
+}
+
+.paper-frame-second {
+  position: relative;
+  width: 527px;
+  height: 13px;
+  top: -39px;
+  flex-shrink: 0;
+  border-radius: 0px 0px 12px 12px;
+  background: linear-gradient(89deg, rgba(255, 255, 255, 0.60) 5.66%, rgba(255, 255, 255, 0.20) 104.97%);
+  backdrop-filter: blur(8px);
+}
